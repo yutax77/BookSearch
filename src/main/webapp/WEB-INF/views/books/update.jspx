@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_yutax77_model_Book" modelAttribute="book" path="/books" versionField="Version" z="T+zum9oXPUNCYFHQ5T5Ry8XHvao=">
+        <field:input field="name" id="c_com_yutax77_model_Book_name" required="true" z="aT3pR9DgGgWkzjk9F5NKxSLuM1A="/>
+        <field:input field="authors" id="c_com_yutax77_model_Book_authors" required="true" z="MJjN1xyOLUy9HwysGyFSp49a7ko="/>
+        <field:input field="publisher" id="c_com_yutax77_model_Book_publisher" required="true" z="MCDTMtPsS8+OTHzQpowuzRzORP8="/>
+        <field:datetime dateTimePattern="${book_published_date_format}" field="published" id="c_com_yutax77_model_Book_published" z="hIxxSvOr6cFFsk9CIGs655q67Hk="/>
+        <field:input field="ISBN" id="c_com_yutax77_model_Book_ISBN" required="true" z="c/DGntd+IWNdgiuRAD8uq9AGBv4="/>
+    </form:update>
+</div>

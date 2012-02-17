@@ -13,8 +13,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
 @RooEquals
+@RooJpaActiveRecord(finders = { "findBooksByNameEquals" })
 public class Book {
 
     @NotNull
