@@ -17,22 +17,25 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml")
 public class BookTest {
 
+	Book book1;
 	@Before
 	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
-	@Test
-	public void test() {
-		Book book1 = new Book();
+		book1 = new Book();
 		book1.setName("aaa");
 		book1.setAuthors("aaa");
 		book1.setPublisher("aaa");
 		book1.setISBN("aaa");
 		book1.persist();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		book1.remove();
+	}
+
+	@Test
+	public void test() {
+
 		List<Book> books = Book.findBooksByNameEquals("aaa").getResultList();
 		assertEquals(1, books.size());
 		assertEquals("aaa", books.get(0).getName());
